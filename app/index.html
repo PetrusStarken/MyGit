@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Repositorios do GitHub</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="myGithubApp" ng-cloak class="lime lighten-5">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">Você está usando um navegador <strong>desatualizado</strong>. Por favor <a href="http://browsehappy.com/?locale=pt-br">atualize o seu navegador</a> para melhorar sua experiência de navegação.</p>
+    <![endif]-->
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <div class="container">
+            <a href="javascript:void(0)" class="brand-logo">Pedro Camara</a>
+            <a href="javascript:void(0)" class="button-collapse" data-activates="mobile-menu" data-menuwidth="200" data-sidenav="left" data-closeonclick="false">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="#/repositorios" class="waves-effect waves-teal">Meus repositórios</a>
+              </li>
+              <li>
+                <a href="#/procurar" class="waves-effect waves-teal">Pesquisar de terceiros</a>
+              </li>
+            </ul>
+            <ul class="side-nav" id="mobile-menu">
+              <li class="bold">
+                <a href="#/repositorios" class="waves-effect waves-teal">Meu repositórios</a>
+              </li>
+              <li class="bold">
+                <a href="#/procurar" class="waves-effect waves-teal">Pesquisar de terceiros</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Add your site or application content here -->
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/materialize/bin/materialize.js"></script>
+    <script src="/bower_components/angular-materialize/src/angular-materialize.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/app-run.js"></script>
+    <script src="scripts/app-routes.js"></script>
+    <script src="scripts/app-config.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
