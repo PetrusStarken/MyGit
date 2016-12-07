@@ -13,10 +13,10 @@
 </div>
 <div class="row">
   <div class="col s12">
-    <p ng-show="search.notFound">Nenhum reposítório encontrado</P>
-    <ul class="collection" ng-show="!search.notFound">
-      <li class="collection-item waves-effect waves-teal" ng-click="openRepo(repo)" ng-repeat="repo in search.searchResults" title="Ver detalhes">
-        <span class="title bold">{{::repo.owner.login}} / {{::repo.name}}</span>
+    <p ng-show="!search.resultFound && search.searchString">Nenhum reposítório encontrado</P>
+    <ul class="collection" ng-show="search.resultFound">
+      <li class="collection-item waves-effect waves-teal" ng-click="openRepo(repo)" ng-repeat="repo in search.searchResult" title="Ver detalhes">
+        <span class="title bold">{{::repo.full_name}}</span>
         <p>{{::repo.description}}</p>
         <div class="chip" ng-show="repo.language">
           {{::repo.language}}
