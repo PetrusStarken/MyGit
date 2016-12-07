@@ -5,5 +5,5 @@
     githubApiUrl: 'https://api.github.com/',
   };
 
-  angular.module('myGitApp').constant('config', config);
+  angular.module('myGithubApp').constant('config', config);
 })(angular);

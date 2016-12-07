@@ -7,27 +7,25 @@
 
   function AppRoutes($routeProvider) {
     $routeProvider
-    .when('/myRepositories', {
-      templateUrl: 'views/repositories.html',
-      controller: 'repositoriesCtrl',
-      controllerAs: 'repositories'
+    .when('/search/:term?', {
+      templateUrl: 'views/search.html',
+      controller: 'searchController',
+      controllerAs: 'search'
     })
     .when('/repo/:owner', {
       templateUrl: 'views/repositories.html',
-      controller: 'repositoriesCtrl',
-      controllerAs: 'repositories'
+      controller: 'reposController',
+      controllerAs: 'repos'
     })
     .when('/repo/:owner/:repo', {
       templateUrl: 'views/repository.html',
-      controller: 'repositoryCtrl',
-      controllerAs: 'repository'
+      controller: 'repoController',
+      controllerAs: 'repo'
     })
-    .when('/error', {
-      templateUrl: 'views/error.html',
-      controller: 'errorCtrl',
-      controllerAs: 'error'
+    .when('/not-found', {
+      templateUrl: '404.html'
     })
-    .otherwise({redirectTo: '/error'});
+    .otherwise({redirectTo: '/not-found'});
   }
 
 })(angular);

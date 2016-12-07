@@ -1,24 +1,22 @@
 # GitHub
 Consumindo a API do GitHub com AngularJs
 
- - Um pouco sobre mim
- - Listagem com todos meus respositórios - /repo/PetrusStarken
+ - Listagem com todos meus respositórios - /repos/PetrusStarken
  - Consulta de todos os repositorios públicos - /repos/:termo-busca
  - Detalhes do respositório - /repo/:proprietário/:repositório
 
-# Frameworks
+## Frameworks
 
-AngularJs, MaterializeCss 
+AngularJs, MaterializeCss
 
-# GitHub
-
-Projeto gerado com [yo angular generator](https://github.com/yeoman/generator-angular) versão 0.15.1
 
 ## Build & development
 
+Projeto gerado com [yo angular generator](https://github.com/yeoman/generator-angular) versão 0.15.1
+
 Execute:
- `gulp` para compilar 
- `gulp serve` para visualizar
+ - `gulp` para compilar
+ - `gulp serve` para visualizar
 
 ## Testing
 

@@ -1,0 +1,40 @@
+
+<div class="page-title">
+  <h1>{{repos.title}}</h1>
+</div>
+
+<div class="row">
+  <div class="col s12 m4 l3">
+    <div class="card">
+      <div class="card-image">
+        <img ng-src="{{::repos.owner.avatar_url}}">
+      </div>
+      <div class="card-content">
+        <p>
+          <b>{{::repos.owner.name}}</b> <br />
+          {{::repos.owner.location}}
+        </p>
+        <p>
+          {{::repos.owner.email}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m8 l9">
+    <ul class="collection">
+      <li class="collection-item waves-effect waves-teal" ng-click="openRepo(repo)" ng-repeat="repo in repos.list" title="Ver detalhes">
+        <span class="title bold">{{::repo.owner.login}} / {{::repo.name}}</span>
+        <p>{{::repo.description}}</p>
+        <div class="chip" ng-show="repo.language">
+          {{::repo.language}}
+        </div>
+        <div class="chip">
+          {{::repo.forks_count}} forks
+        </div>
+        <div class="chip">
+          {{::repo.stargazers_count}} stars
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

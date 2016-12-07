@@ -1,0 +1,61 @@
+
+<div class="page-title">
+  <h1><a ng-href="#/repo/{{::repo.owner.login}}"> {{::repo.owner.login}}</a> / {{::repo.details.name}}</h1>
+</div>
+
+<div class="row">
+  <div class="col s12 m4">
+    <div class="card">
+      <div class="card-image">
+        <img ng-src="{{::repo.owner.avatar_url}}">
+      </div>
+      <div class="card-content">
+        <p>
+          <b>{{::repo.owner.name}}</b> <br />
+          {{::repo.owner.location}}
+        </p>
+        <p>
+          {{::repo.owner.email}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m8">
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <p class="repo-view-on-git">
+              <a ng-href="https://github.com/{{::repo.details.full_name}}" target="_blank">Ver no GitHub</a>
+            </p>
+            <p ng-show="repo.details.description" class="repo-description">{{::repo.details.description}}</p>
+            <p ng-show="!repo.details.description" class="repo-description">Nenhuma descrição informada para o repositório.</p>
+            <p class="repo-updated-at">Editado pela última vez em: {{repo.details.updated_at | date: 'dd/MM/yyyy'}} às {{repo.details.updated_at | date: 'HH:mm'}}</p>
+            <div class="chip" ng-repeat="(key, value) in repo.languages">
+              {{::key}}
+            </div>
+            <div class="chip">
+              {{::repo.details.forks_count}} forks
+            </div>
+            <div class="chip">
+              {{::repo.details.stargazers_count}} stars
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Contribuidores</span>
+            <p ng-repeat="contributor in repo.contributors">
+              <img ng-src="{{::contributor.avatar_url}}" width="20" height="20">
+              <a ng-href="#/repo/{{::contributor.login}}">{{contributor.login}}</a> - {{contributor.contributions}} {{contributor.contributions === 1 ? 'contribução' : 'contribuições'}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
