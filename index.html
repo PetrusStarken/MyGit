@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Repositorios do GitHub</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/vendor-f2a79789f0.css">
+    <link rel="stylesheet" href="styles/main-65d735ce3a.css">
+  </head>
+  <body ng-app="myGithubApp" ng-cloak class="lime lighten-5">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">Você está usando um navegador <strong>desatualizado</strong>. Por favor <a href="http://browsehappy.com/?locale=pt-br">atualize o seu navegador</a> para melhorar sua experiência de navegação.</p>
+    <![endif]-->
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <div class="container">
+            <a href="javascript:void(0)" class="brand-logo">Pedro Camara Junior</a>
+            <a href="javascript:void(0)" class="button-collapse" data-activates="mobile-menu" data-menuwidth="200" data-sidenav="left" data-closeonclick="false">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="#/repo/PetrusStarken" class="waves-effect waves-teal">Meus repositórios</a>
+              </li>
+              <li>
+                <a href="#/search" class="waves-effect waves-teal">Pesquisar de terceiros</a>
+              </li>
+            </ul>
+            <ul class="side-nav" id="mobile-menu">
+              <li class="bold">
+                <a href="#/repo/PetrusStarken" class="waves-effect waves-teal">Meu repositórios</a>
+              </li>
+              <li class="bold">
+                <a href="#/search" class="waves-effect waves-teal">Pesquisar de terceiros</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Add your site or application content here -->
+    <main>
+      <div class="progress" ng-show="carregando">
+        <div class="indeterminate"></div>
+      </div>
+      <div class="container section" ng-view>
+
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 social-links">
+            <a href="https://github.com/PetrusStarken/" target="_blank" class="social-link"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="http://pt.stackoverflow.com/users/34771/pedro-camara-junior" target="_blank" class="social-link"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/pedrocamarajunior" target="_blank" class="social-link"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+            <a href="https://br.linkedin.com/in/pcamarajr" target="_blank" class="social-link"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2016 Pedro Camara Junior
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/vendor-f83cf65fea.js"></script>
+
+    <script src="scripts/scripts-95a03348e9.js"></script>
+</body>
+</html>
