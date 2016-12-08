@@ -12,7 +12,7 @@
 
     function findRepository(searchString) {
       if (searchString === '') {
-        vm.resultFind = false;
+        vm.resultFound = false;
         return;
       }
       if (searchString.length < 3) {
@@ -22,7 +22,7 @@
       repoService.getReposByName(searchString).success(onSuccess).error(onError);
 
       function onSuccess(res) {
-        vm.resulFound = !res.incomplete_results;
+        vm.resultFound = !res.incomplete_results;
         vm.searchResult = res.items;
       }
 
