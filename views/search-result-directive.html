@@ -1,0 +1,17 @@
+<ul class="collection">
+  <li class="collection-item waves-effect waves-teal" ng-click="openRepo(repo)" ng-repeat="repo in repos" title="Ver detalhes">
+    <span class="title bold">{{::repo.full_name}}</span>
+    <p>{{::repo.description}}</p>
+    <div class="chip" ng-show="repo.language">
+      {{::repo.language}}
+    </div>
+    <div class="chip">
+      <i class="fa fa-code-fork"></i>
+      {{::repo.forks_count}} forks
+    </div>
+    <div class="chip">
+      <i class="fa fa-star"></i>
+      {{::repo.stargazers_count}} stars
+    </div>
+  </li>
+</ul>
