@@ -26,7 +26,7 @@
       controllerAs: 'repo'
     })
     .when('/not-found', {
-      templateUrl: '404.html'
+      templateUrl: 'views/404.html'
     })
     .otherwise({redirectTo: '/not-found'});
   }
