@@ -3,7 +3,7 @@
   <h1><a ng-href="#/repo/{{::repo.owner.login}}"> {{::repo.owner.login}}</a> / {{::repo.details.name}}</h1>
 </div>
 
-<div class="row">
+<div class="row" ng-show="!carregando">
   <div class="col s12 m4">
     <div class="card">
       <div class="card-image">
@@ -35,9 +35,11 @@
               {{::key}}
             </div>
             <div class="chip">
+              <i class="fa fa-code-fork"></i>
               {{::repo.details.forks_count}} forks
             </div>
             <div class="chip">
+              <i class="fa fa-star"></i>
               {{::repo.details.stargazers_count}} stars
             </div>
           </div>
