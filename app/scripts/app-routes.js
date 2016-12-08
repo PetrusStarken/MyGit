@@ -7,6 +7,9 @@
 
   function AppRoutes($routeProvider) {
     $routeProvider
+    .when('/', {
+      templateUrl: 'views/main.html'
+    })
     .when('/search/:term?', {
       templateUrl: 'views/search.html',
       controller: 'searchController',
