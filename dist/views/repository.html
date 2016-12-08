@@ -3,22 +3,9 @@
   <h1><a ng-href="#/repo/{{::repo.owner.login}}"> {{::repo.owner.login}}</a> / {{::repo.details.name}}</h1>
 </div>
 
-<div class="row">
+<div class="row" ng-show="!carregando">
   <div class="col s12 m4">
-    <div class="card">
-      <div class="card-image">
-        <img ng-src="{{::repo.owner.avatar_url}}">
-      </div>
-      <div class="card-content">
-        <p>
-          <b>{{::repo.owner.name}}</b> <br />
-          {{::repo.owner.location}}
-        </p>
-        <p>
-          {{::repo.owner.email}}
-        </p>
-      </div>
-    </div>
+    <stk-owner owner="repo.owner"></stk-owner>
   </div>
   <div class="col s12 m8">
     <div class="row">
@@ -35,9 +22,11 @@
               {{::key}}
             </div>
             <div class="chip">
+              <i class="fa fa-code-fork"></i>
               {{::repo.details.forks_count}} forks
             </div>
             <div class="chip">
+              <i class="fa fa-star"></i>
               {{::repo.details.stargazers_count}} stars
             </div>
           </div>
