@@ -5,20 +5,7 @@
 
 <div class="row" ng-show="!carregando">
   <div class="col s12 m4">
-    <div class="card">
-      <div class="card-image">
-        <img ng-src="{{::repo.owner.avatar_url}}">
-      </div>
-      <div class="card-content">
-        <p>
-          <b>{{::repo.owner.name}}</b> <br />
-          {{::repo.owner.location}}
-        </p>
-        <p>
-          {{::repo.owner.email}}
-        </p>
-      </div>
-    </div>
+    <stk-owner owner="repo.owner"></stk-owner>
   </div>
   <div class="col s12 m8">
     <div class="row">
